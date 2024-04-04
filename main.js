@@ -11,7 +11,9 @@ messanger.start();
 
 app.get('/change-output-device', (req, res) => {
     const outputDevice = req.query.outputDevice;
-    console.log('outputDevice changed to: ', outputDevice)
+    
+    console.log('\noutputDevice changed to: ', outputDevice)
+
     if (outputDevice === 'console') {
         messanger.setOutputDevice(new ConsoleOutput());
     } else if (outputDevice === 'file') {

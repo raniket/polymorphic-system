@@ -1,15 +1,15 @@
 const fs = require('fs');
-const IOutPut = require('./IOutPut')
+const IODeviceInterface = require('./IODeviceInterface')
 
 
-class FileOutput extends IOutPut {
+class FileOutput extends IODeviceInterface {
 
     constructor() {
         super();
         this.fileName = 'output.txt';
     }
 
-    out(message) {
+    write(message) {
         fs.appendFile(this.fileName, message, (err) => {
             if (err) throw err;
         });

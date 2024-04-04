@@ -1,10 +1,10 @@
-const IOutPut = require('./IOutPut')
+const IODeviceInterface = require('./IODeviceInterface')
 
-class ConsoleOutput extends IOutPut {
+class ConsoleOutput extends IODeviceInterface {
     constructor() {
         super();
     }
-    out(message) {
+    write(message) {
         console.log(message)
     }
 }

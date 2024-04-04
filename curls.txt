@@ -1,0 +1,10 @@
+For outputDevice equal to 'console':
+curl -X GET "http://yourdomain.com/change-output-device?outputDevice=console"
+
+
+For outputDevice equal to 'file':
+curl -X GET "http://yourdomain.com/change-output-device?outputDevice=file"
+
+
+For outputDevice equal to 'voice':
+curl -X GET "http://yourdomain.com/change-output-device?outputDevice=voice"

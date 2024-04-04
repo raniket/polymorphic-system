@@ -1,11 +1,11 @@
 const gTTS = require('gtts');
-const IOutPut = require('./IOutPut')
+const IODeviceInterface = require('./IODeviceInterface')
 	
-class VoiceOutput extends IOutPut {
+class VoiceOutput extends IODeviceInterface {
     constructor() {
         super();
     }
-    out(message) {
+    write(message) {
         const speech = new gTTS(message, 'en');
         speech.save('voice.mp3', function (err, result){
             if(err) { throw new Error(err); }
